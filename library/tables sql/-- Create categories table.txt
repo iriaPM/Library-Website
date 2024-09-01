@@ -1,0 +1,79 @@
+-- Create categories table
+CREATE TABLE categories (
+    CategoryID INT PRIMARY KEY,
+    CategoryDescrip VARCHAR(255) NOT NULL
+);
+
+-- Insert data into categories table
+INSERT INTO categories (CategoryID, CategoryDescrip) VALUES
+('001', 'Health'),
+('002', 'Business'),
+('003', 'Biography'),
+('004', 'Technology'),
+('005', 'Travel'),
+('006', 'Self-Help'),
+('007', 'Cookery'),
+('008', 'Fiction');
+
+-- Create users table
+CREATE TABLE users (
+    Username VARCHAR(50) PRIMARY KEY,
+    Password VARCHAR(50) NOT NULL,
+    FirstName VARCHAR(50) NOT NULL,
+    Surname VARCHAR(50) NOT NULL,
+    AddressLine1 VARCHAR(255) NOT NULL,
+    AddressLine2 VARCHAR(255),
+    City VARCHAR(100) NOT NULL,
+    Telephone VARCHAR(15) NOT NULL,
+    Mobile VARCHAR(15) NOT NULL
+);
+
+-- Insert data into users table
+INSERT INTO users (Username, Password, FirstName, Surname, AddressLine1, AddressLine2, City, Telephone, Mobile) VALUES
+('alanjmckenna', '1234s', 'Alan', 'McKenna', '38 Cranley Road', 'Fairview', 'Dublin', '9998377', '856625567'),
+('joecrotty', 'kj7899', 'Joseph', 'Crotty', 'Apt 5 Clyde Road', 'Donnybrook', 'Dublin', '8887889', '876654456'),
+('tommy100', '123456', 'Tom', 'Behan', '14 Hyde Road', 'Dalkey', 'Dublin', '9983747', '876738782');
+
+-- Create books table
+CREATE TABLE books (
+    ISBN VARCHAR(20) PRIMARY KEY,
+    BookTitle VARCHAR(255) NOT NULL,
+    Author VARCHAR(100) NOT NULL,
+    Edition INT NOT NULL,
+    Year INT NOT NULL,
+    CategoryID INT,
+    IsReserved CHAR(1) NOT NULL DEFAULT 'N', -- Updated IsReserved column
+    FOREIGN KEY (CategoryID) REFERENCES categories(CategoryID)
+);
+
+-- Insert data into books table
+INSERT INTO books (ISBN, BookTitle, Author, Edition, Year, CategoryID,IsReserved) VALUES
+('093-403992', 'Exploring Peru', 'Alicia Oneill', 3, 1997, '003','N'),
+('23472-8729', 'Computers in Business', 'Stephanie Birchi', 4, 2005, '005','N'),
+('237-34823', 'Business Strategy', 'Anabelle Sharpe', 2, 2002, '002','N'),
+('23u8-923849', 'A guide to nutrition', 'Susan O'Neill', 2, 1997, '001','N'),
+('2983-3494', 'Cooking for children', 'Kevin Graham', 1, 2003, '007','N'),
+('82n8-308', 'DaVinci Code', 'Dan Brown', 5, 1998, '004','N'),
+('9823-23984', 'My ranch in Texas', 'Joe Peppard', 8, 2004, '001','N'),
+('9823-2403-0', 'How to cook Italian food', 'John Thorpe', 1, 2003, '008','N'),
+('98234-029384', 'Optimising your business', 'George Bush', 1, 2005, '001','Y'),
+('9823-98345', 'Tara Road', 'Jamie Oliver', 2, 2005, '007','Y'),
+('9823-98487', 'My life in bits', 'Cleo Blair', 1, 2001, '002','N'),
+('988745-234', 'Shooting History', 'Maeve Binchy', 4, 2002, '008','N'),
+('993-004-00', 'computers for idiots', 'John Smith', 1, 2001, '001','N'),
+('9987-0039882', 'My life in picture', 'Jon Snow', 3, 2003, '001','N');
+
+-- Create reservations table
+CREATE TABLE reservations (
+    ISBN VARCHAR(20),
+    Username VARCHAR(50),
+    ReservedDate DATE,
+    PRIMARY KEY (ISBN, Username),
+    FOREIGN KEY (ISBN) REFERENCES books(ISBN),
+    FOREIGN KEY (Username) REFERENCES users(Username)
+);
+
+-- Insert data into reservations table
+INSERT INTO reservations (ISBN, Username, ReservedDate) VALUES
+('98234-029384', 'joecrotty', '2008-10-11'),
+('9823-98345', 'tommy100', '2008-10-11');

@@ -1,0 +1,92 @@
+ISBN
+093-403992
+23472-8729
+237-34823
+23u8-923849
+2983-3494
+82n8-308
+9823-23984
+9823-2403-0
+98234-029384
+9823-98345
+9823-98487
+988745-234
+993-004-00
+9987-0039882
+
+Book Title
+Exploring Peru
+Computers in Business
+Business Strategy
+A guide to nutrition
+ Cooking for children
+ DaVinci Code
+My ranch in Texas
+ How to cook Italian food
+ Optimising your business
+Tara Road
+My life in bits
+ Shooting History
+computers for idiots
+My life in picture
+
+Author
+Alicia Oneill 
+Stephanie Birchi 
+Anabelle Sharpe 
+Susan O'Neill
+Kevin Graham 
+Dan Brown
+Joe Peppard
+John Thorpe
+George Bush
+Jamie Oliver
+Cleo Blair
+Maeve Binchy
+John Smith
+Jon Snow
+
+Edition
+3
+4
+2
+2
+1
+5
+8
+1
+1
+2
+1
+4
+1
+Year CategoryID
+1997 003
+2005 005
+2002 002
+1997 001
+2003 007
+1998 004
+2004 001
+2003 008
+2005 001
+2005 007
+2001 002
+2002 008
+2001 001
+2003 001
+Reservations
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+Y
+N
+N
+N
+N

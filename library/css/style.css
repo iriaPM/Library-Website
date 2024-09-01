@@ -1,0 +1,335 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 150vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+/*_______header____________*/
+header {
+    background-color: #0359b5;
+    color: #fff;
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    
+}
+
+#logo a:hover {
+    cursor: pointer;
+}
+
+#logo {
+    width: 10vw;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+#logo img {
+    width: 10vw;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+#title {
+    font-size: 1.5vw;
+    margin-left: 20px;
+}
+
+#title a {
+    text-decoration: none;
+    color: white;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3895f8;
+}
+
+ul.navbar li {
+    float: left;
+    font-size: 1.5vw;
+    margin-right: 20px;
+}
+
+ul.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color: #0359b5;
+    color: #dddddd;
+}
+
+/*_______content_____________*/
+#content h3 {
+    text-align: center;
+    text-shadow: 1px 1px 2px #0359b5, 0 0 25px rgb(0, 115, 255), 0 0 5px rgb(4, 4, 255);
+    color: #89bef7;
+}
+
+/*__________buttons___________*/
+
+.buttonsfun {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.button1 {
+    flex: 1 0 200px;
+    max-width: 200px;
+}
+
+.button1 a {
+    text-decoration: none;
+}
+
+div.button1 {
+    width: 210px;
+    height: 210px;
+    margin: 40px auto;
+    position: relative;
+
+}
+
+div.button1 img {
+    border-radius: 50%;
+    border: 4px #fff solid;
+    -webkit-box-shadow: 0px 0px 20px 0px #028ac4;
+    box-shadow: 0px 0px 20px 0px #0359b5;
+    width: 100%;
+    height: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.button1 h1 {
+    text-align: center;
+    margin-top: -0.1em;
+    font-size: 43px;
+    text-shadow: 1px 1px 2px #277dd9, 0 0 25px rgb(69, 149, 246), 0 0 5px rgb(4, 138, 255);
+    color: #044e9d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button1:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/*________________________________*/
+#login {
+    width: fit-content;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: auto;
+    position: relative; 
+    display: grid;
+    align-items: center;
+    align-content: center;
+    font-size: 25px;
+}
+
+.forms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+}
+
+.formone {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    background-color: rgba(0, 115, 255, 0.7);
+    align-items: center;
+    width: 50%; 
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/*_______________________________________*/
+
+
+.response {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgb(254, 1, 1);
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.7);
+    align-items: center;
+    width: fit-content;
+    padding: 5px; 
+    margin: auto;
+}
+
+.forms input {
+    background-color:white;
+    border-color: white;
+    display: block;
+    font-size: 12px;
+    padding: 5px;
+    width: 90%;
+    
+}
+
+.forms input:focus {
+    outline: 0;
+}
+.forms input:focus {
+    outline: 0;
+}
+
+.forms.success input {
+    border-color: #09c372;
+}
+
+.forms.error input {
+    border-color: #ff0000;
+}
+
+.formerror {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: rgb(254, 1, 1);
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.7);
+    align-items: center;
+    width: fit-content;
+    padding: 5px; 
+    margin: auto;
+    
+}
+
+
+#submitbtn :hover {
+    cursor: pointer;
+}
+
+.tablereservations {
+    padding: 20px;
+    border: #000000 solid 2px;
+    margin: auto; 
+    width: 80%; 
+    background-color: rgba(0, 115, 255, 0.5);
+    font-size: 15px;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+
+.tablereservations td{
+    border: #ffffff solid;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 10px; 
+    text-align: center; 
+    color:black;
+
+}
+.tablereservations th {
+    border: #ffffff solid;
+    border-radius: 5px;
+    background-color: #3895f8;
+    padding: 10px; 
+    text-align: center; 
+    color:black;
+}
+.tablereservations a{
+    color: #000000;
+    text-decoration: none;   
+}
+
+
+#removebutton{
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+       
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+    
+  }
+  
+  .pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 0 5px; 
+    background-color: white;
+
+  }
+  
+
+
+/*_______footer____________*/
+footer {
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0359b5;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    
+}
+
+.footerlinks a:link {
+    color: #ffffff;
+}
+
+.footerlinks a:visited {
+    color: rgb(91, 168, 240);
+}
+
+.footerlinks a:hover {
+    color: #08dbee;
+    cursor: pointer;
+}
+
+.footerlinks a:active {
+    color: #000000;
+}
+
+.footerlinks a {
+    text-decoration: none;
+}
+
+.footer p {
+    margin-left: 10vh;
+}
